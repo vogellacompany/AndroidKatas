@@ -13,23 +13,15 @@ buildscript
 
     dependencies
     {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:2.2.0-alpha3'
     }
 }
 
 dependencies
 {
-    def androidModule = project(':app')
-    compile androidModule
 
-    testCompile androidModule.android.applicationVariants.toList().first().javaCompile.classpath
-    testCompile androidModule.android.applicationVariants.toList().first().javaCompile.outputs.files
-    testCompile files(androidModule.plugins.findPlugin("com.android.application").getBootClasspath())
-
-    testCompile 'junit:junit:4.+'
-    testCompile('org.robolectric:robolectric:2.4') {
-        exclude module: 'support-v4'
-    }
+    testCompile 'junit:junit:4.12'
+    testCompile('org.robolectric:robolectric:2.4')
  }
 
 tasks.withType(Test)

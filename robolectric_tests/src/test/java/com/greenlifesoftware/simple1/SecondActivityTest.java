@@ -2,6 +2,7 @@ package com.greenlifesoftware.simple1;
 
 import android.app.Fragment;
 
+
 import com.greenlifesoftware.support.RobolectricGradleTestRunner;
 
 import org.junit.Before;
